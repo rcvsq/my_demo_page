@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Animate Anyone 2">
+  <meta property="og:title" content="Animate Anyone 2"/>
+  <meta property="og:description" content="Animate Anyone 2: High-Fidelity Character Image Animation with
+  Environment Affordance"/>
+  <meta property="og:url" content="https://humanaigc.github.io/animate-anyone-2/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static2/images/motivation.png" />
+  <meta property="og:image:width" content="2412"/>
+  <meta property="og:image:height" content="1394"/>
+
+
+  <meta name="twitter:title" content="Animate Anyone 2">
+  <meta name="twitter:description" content="Animate Anyone 2: High-Fidelity Character Image Animation with
+  Environment Affordance">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static2/images/motivation.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Character Animation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Animate Anyone 2</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href=https://github.com/HumanAIGC>
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://humanaigc.github.io/animate-anyone/">
+              AnimateAnyone
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/OmniTalker/">
+              OmniTalker
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/TalkingBody/">
+              TalkingBody
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/emote-portrait-alive-2/">
+              EMO2
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/emote-portrait-alive/">
+              EMO
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/outfit-anyone/">
+              OutfitAnyone
+            </a>
+            <a class="navbar-item" href="https://tomguluson92.github.io/projects/cloth2tex/">
+              Cloth2Tex
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/vivid-talk/">
+              VividTalk
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-max-desktop"> -->
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Animate Anyone 2: High-Fidelity Character Image Animation with
+            Environment Affordance</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&user=Arz3iGUAAAAJ&gmla=AJsN-F72u4R_vwVl2Jc0Sy_qIYuSwExx8ilpfrd-w5Yfi5FYFP_WhbJtHbAK_c5w-3KNBgTRjWiTvEFLtJSV5ryd1JuNVQdMVDMuSJS5dfn7NWbZQQpGGyyxlrfoq6cv6S_23QTSUWWY"
+                target="_blank">Li Hu</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://humanaigc.github.io/animate-anyone-2/" target="_blank">Guangyuan Wang</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=EY9GiDsAAAAJ&hl=en" target="_blank">Zhen Shen</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=cze1sXQAAAAJ&hl=en" target="_blank">Xin Gao</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=008R8c0AAAAJ&hl=en" target="_blank">Dechao Meng</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=2E3c39AAAAAJ&hl=zh-CN" target="_blank">Lian Zhuo</a>,</span>
+            <br>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=QTgxKmkAAAAJ&hl=zh-CN" target="_blank">Peng Zhang</a>,</span>
+            <span class="author-block">
+              <a href="https://dblp.org/pid/11/4046.html" target="_blank">Bang Zhang</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=FJwtMf0AAAAJ&hl=zh-CN" target="_blank">Liefeng Bo</a>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Tongyi Lab，Alibaba Group</span>
+          </div>
+
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2502.06145" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Teaser Video -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-vcentered is-centered">
+
+
+            <div class="column">
+                <video class="video-player" poster="" id="tree2" autoplay controls muted loop>
+                    <source src="static2/videos/hoi/handou_res.mp4" type="video/mp4">
+                </video>
+
+            </div>
+                            <div class="column">
+                    <video class="video-player" poster="" id="tree2" autoplay controls muted loop>
+                        <source src="static2/videos/hoi/huaban_res1.mp4" type="video/mp4">
+                    </video>
+                </div>
+        </div>
+        <div class="columns is-vcentered is-centered">
+
+
+            <div class="column">
+                <video class="video-player" poster="" id="tree2" autoplay controls muted loop>
+                    <source src="static2/videos/motion/paoku2_res.mp4" type="video/mp4">
+                </video>
+
+            </div>
+                            <div class="column">
+                    <video class="video-player" poster="" id="tree2" autoplay controls muted loop>
+                        <source src="static2/videos/motion/wuqiang_res1.mp4" type="video/mp4">
+                    </video>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent character image animation methods based on diffusion models, such as Animate Anyone, have made significant progress in generating consistent and generalizable character animations. However, these approaches fail to produce reasonable associations between characters and their environments. To address this limitation, we introduce Animate Anyone 2, aiming to animate characters with environment affordance. Beyond extracting motion signals from source video, we additionally capture environmental representations as conditional inputs. The environment is formulated as the region with the exclusion of characters and our model generates characters to populate these regions while maintaining coherence with the environmental context. We propose a shape-agnostic mask strategy that more effectively characterizes the relationship between character and environment. Furthermore, to enhance the fidelity of object interactions, we leverage an object guider to extract features of interacting objects and employ spatial blending for feature injection. We also introduce a pose modulation strategy that enables the model to handle more diverse motion patterns. Experimental results demonstrate the superior performance of the proposed method.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<!-- motivation -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Motivation</h2>
+      <div class="item">
+        <!-- Your image here -->
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="static2/images/motivation.png" alt="MY ALT TEXT" style="width: 75%;"/>
+        </div>
+        <h2 class="content has-text-justified">
+          We propose Animate Anyone 2, which differs from previous character image animation methods that solely utilize motion signals to animate characters. Our approach additionally extracts environmental representations from the driving video, thereby enabling character animation to exhibit environment affordance.
+        </h2>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Frmaework -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Method</h2>
+      <div class="item">
+        <!-- Your image here -->
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="static2/images/framework.png" alt="MY ALT TEXT" style="width: 75%;"/>
+        </div>
+        <h2 class="content has-text-justified">
+          The framework of Animate Anyone 2. We capture environmental information from the source video. The environment is formulated as regions devoid of characters and incorporated as model input, enabling end-to-end learning of character-environment fusion. To preserve object interactions, we additionally inject features of objects interacting with the character. These object features are extracted by a lightweight object guider and merged into the denoising process via spatial blending. To handle more diverse motions, we propose a pose modulation approach to better represent the spatial relationships between body limbs.
+        </h2>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      <h2 class="title is-4">Environment Interaction</h2>
+      <div id="results-carousel11" class="carousel results-carousel">
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/handin_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/guitar_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/bicycle_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/horse2_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/chonglang_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/body_bast_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/gu_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/bicycle2_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/horse3_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="content has-text-justified">
+        Animate Anyone 2 demonstrates remarkable capabilities in generating characters with contextually coherent environmental interactions, characterized by seamless character-scene integration and robust character-object interaction.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Dynamic Motion</h2>
+      <div id="results-carousel22" class="carousel results-carousel">
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/motion/paoku4_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/motion/huazi_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/wuqiang_res2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/motion/breaking2_res1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/motion/breaking1_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/hoi/wujian_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static2/videos/motion/huimaqiang_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="content has-text-justified">
+        Animate Anyone 2 demonstrates robust capability in handling diverse and intricate motions, while ensuring character consistency and maintaining plausible interactions with the environmental context.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Human Interaction </h2>
+      <div id="results-carousel33" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/multi/aiyue_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/multi/dadou_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/multi/titui_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/multi/huabin1_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/multi/back_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/multi/gaozan3_res.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="content has-text-justified">
+        Animate Anyone 2 is capable of generating interactions between characters, ensuring the plausibility of their movements and coherence with the surrounding environment.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Comparisons</h2>
+      <h2 class="title is-4">with Viggle</h2>
+      <div id="results-carousel33" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/viggle/viggle_com1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/viggle/viggle_com4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/viggle/viggle_com5.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/viggle/viggle_com2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/viggle/viggle_com3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="content has-text-justified">
+        <a href="https://viggle.ai/">Viggle</a> is capable of swapping characters in a video based on a provided character image, which is similar to the application scenario of our method. We compare our results with the latest Viggle V3. The outputs of Viggle demonstrate a rough blending of the characters with the environment, lack natural motion, and fail to capture the interaction between characters and the surroundings. In contrast, the results of our method exhibit higher fidelity.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">with MIMO</h2>
+      <div id="results-carousel33" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/mimo/mimo_com6.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/mimo/mimo_com77.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/mimo/mimo_com3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static2/videos/mimo/mimo_com55.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="content has-text-justified">
+        <a href="https://menyifang.github.io/projects/MIMO/index.html">MIMO</a> is the most relevant method to our task setting, which decomposes videos into human, background and occlusion based on depth and composing these elements to generate character video. Our approach demonstrates superior robustness and finer detail preservation.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hu2025animateanyone2,
+      title={Animate Anyone 2: High-Fidelity Character Image Animation with Environment Affordance},
+      author={Li Hu and Guangyuan Wang and Zhen Shen and Xin Gao and Dechao Meng and Lian Zhuo and Peng Zhang and Bang Zhang and Liefeng Bo},
+      journal={arXiv preprint arXiv:2502.06145},
+      website={https://humanaigc.github.io/animate-anyone-2/},
+      year={2025}
+}</code></pre>
+  </div>
+</section>
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+bulmaCarousel.attach('#results-carousel11', {
+    slidesToScroll: 1,
+    slidesToShow: 2,
+    infinite: true,
+    autoplay: false,
+});
+bulmaCarousel.attach('#results-carousel22', {
+    slidesToScroll: 1,
+    slidesToShow: 2,
+    infinite: true,
+    autoplay: false,
+});
+bulmaCarousel.attach('#results-carousel33', {
+    slidesToScroll: 1,
+    slidesToShow: 2,
+    infinite: true,
+    autoplay: false,
+});
+</script>
+
+<!-- Default Statcounter code for aa2.0
+https://humanaigc.github.io/animate-anyone-2/ -->
+<script type="text/javascript">
+var sc_project=13086045; 
+var sc_invisible=1; 
+var sc_security="edb02115"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/13086045/0/edb02115/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
