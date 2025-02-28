@@ -105,7 +105,7 @@
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-            Traditional sports analytics and computer vision models rely on manually annotated datasets, which are expensive and time-consuming to create. Tennis Autodistillation introduces an automated approach to dataset generation by leveraging foundation models—large, general-purpose AI models capable of zero-shot understanding. This project employs ChatGPT Vision (GPT-4V) and <a href="https://arxiv.org/abs/2401.14159">Grounded SAM</a> to automatically classify frames, detect players, and identify court landmarks from raw tennis match footage. These auto-labeled datasets are then used to train lightweight, task-specific models that can efficiently perform player detection and court keypoint estimation in real-time. By using foundation models for initial labeling, we eliminate the need for manual annotation, enabling rapid dataset creation for model training. The <a href="https://github.com/autodistill/autodistill"> Roboflow Autodistill</a> library automates the process of transferring knowledge from powerful but resource-intensive models to smaller, more efficient models, making real-time tennis analysis feasible even on consumer hardware. The final trained models can take a raw video of a tennis match and generate an overhead minimap that tracks player positions, opening doors for automated sports analytics, tactical insights, and AI-powered coaching tools. This method not only applies to tennis but can be extended to other sports, surveillance, and autonomous systems where structured datasets are essential.
+	    Traditional sports analytics and computer vision models rely on manually annotated datasets, which are expensive and time-consuming to create. Tennis Autodistillation introduces an automated approach to dataset generation by leveraging foundation models—large, general-purpose AI models capable of zero-shot understanding. This project employs <strong>ChatGPT Vision (GPT-4V)</strong> and <a href="https://arxiv.org/abs/2401.14159"><strong>Grounded SAM</strong></a> to automatically classify frames, detect players, and identify court landmarks from raw tennis match footage. These auto-labeled datasets are then used to train lightweight, task-specific models that can efficiently perform player detection and court keypoint estimation in real-time. By using foundation models for initial labeling, we eliminate the need for manual annotation, enabling rapid dataset creation for model training. The <a href="https://github.com/autodistill/autodistill"><strong>Roboflow Autodistill</strong></a> library automates the process of transferring knowledge from powerful but resource-intensive models to smaller, more efficient models, making real-time tennis analysis feasible even on consumer hardware. The final trained models can take a raw video of a tennis match and generate an overhead minimap that tracks player positions, opening doors for automated sports analytics, tactical insights, and AI-powered coaching tools. This method not only applies to tennis but can be extended to other sports, surveillance, and autonomous systems where structured datasets are essential.
 	    </p>
           </div>
         </div>
@@ -124,13 +124,25 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Adaptive Sparse Voxel Representation and Rendering</h2>
+          <h2 class="title is-3">Project Pipeline</h2>
           <div class="content has-text-justified">
             <p>
-              Our scene representation is a hybrid of primitive and volumetric model.
-              <strong>(a) Primitive component.</strong> We explicitly allocate voxels primitives to cover different scene level-of-details under an Octree layout. Note that we do not replicate a traditional Octree data structure with parent-child pointers or linear Octree. We only keep voxels at the Octree leaf nodes without any ancestor nodes.
-              <strong>(b) Volumetric component.</strong> Inside a voxel is a volumetric (trilinear) density field and a (constant) spherical harmonic field. We sample K points on the ray-voxel intersection segment to compute the intensity contribution from the voxel to the pixel with numerical integration.
-            </p>
+ 		<ul>
+  <li>
+    <strong>Frame Extraction & Classification:</strong> The video is broken into frames, and each frame is classified into categories: gameplay (full court view), partial view (only part of court visible), close-up (player close-ups), or ignore (irrelevant frames). This ensures we focus on frames where the whole court and players are visible.
+  </li>
+  <li>
+    <strong>Player Detection (Bounding Boxes):</strong> For each gameplay frame, we detect tennis players on the court. We use <a href="https://arxiv.org/abs/2401.14159">Grounded SAM</a> – which combines an open-set object detector with the Segment Anything Model – to find players based on the textual prompt "tennis player". Grounded SAM outputs segmentation masks of the players, which we convert to bounding boxes. These auto-labeled bounding boxes form a training dataset to train a smaller Tennis Player Detector (e.g. a YOLO model).
+  </li>
+  <li>
+    <strong>Court Landmark Detection (Keypoints):</strong> We identify key court landmarks (e.g. court corner points and line intersections) in each gameplay frame. Using Grounded SAM, we first segment the tennis court’s playable area (the white-line boundary). From this mask, we estimate the four corner points of the court. Given the known geometry of a tennis court, we compute a homography (perspective transform) using the corner points and project the full set of 14 court keypoints (such as service line intersections, net posts, etc.) onto the image. This provides labeled pixel coordinates for all important landmarks, used to train a Court Keypoints Detection model (a pose estimation model that predicts these 14 points).
+  </li>
+  <li>
+    <strong>Homography & Minimap Generation:</strong> With the trained models, each new video frame can be processed: the classifier selects gameplay frames, the player detector finds players, and the landmarks model finds court points. Finally, we compute the homography for each frame to map player positions from the video frame into an overhead court coordinate system. The output is an annotated minimap of the tennis court for each frame, showing icons or markers for player positions on a schematic of the court. This minimap is essentially a bird’s-eye view tracking the players as the rally unfolds.
+  </li>
+</ul>
+
+	    </p>
             <div style="max-width: 700px; margin: auto;">
               <img src="./images/representations.jpg">
             </div>
