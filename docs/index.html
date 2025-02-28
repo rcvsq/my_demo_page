@@ -123,6 +123,10 @@
           <h2 class="title is-3">Project Pipeline</h2>
           <div class="content has-text-justified">
             <p>
+	    The Project Pipeline described in this section refers to the inference pipeline, where a video is split into frames, and each frame is processed sequentially by the models previously trained.  First, a frame classificationa model categorizes the frame type, ensuring only relevant gameplay frames are analyzed. Then, a player detection model identifies players on the court, followed by a court landmark detection model that estimates key points on the court. Finally, a homography transformation
+
+
+
  		<ul>
   <li>
     <strong>Frame Extraction & Classification:</strong> The video is broken into frames, and each frame is classified into categories: gameplay (full court view), partial view (only part of court visible), close-up (player close-ups), or ignore (irrelevant frames). This ensures we focus on frames where the whole court and players are visible.
