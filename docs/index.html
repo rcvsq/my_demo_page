@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering">
-  <meta name="keywords" content="Sparse Voxel, Voxel, Octree, Rasterization">
+  <meta name="keywords" content="Model Distillation, Automatic Datataset Creation, Court Homography, Player Detection, Tennis">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SVRaster</title>
 
@@ -80,72 +80,21 @@
   </section>
 
 
+  <!-- video demo -->
   <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div class="video-container">
         <video autoplay controls muted loop playsinline height="100%">
-          <source src="./videos/fly_through_bicycle.mp4" type="video/mp4">
+          <source src="./videos/tennis_demo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-      <p>We optimize adaptive sparse voxels radiance field from multi-view images without SfM points. The fly-through videos are rendered by our SVRaster in >100 FPS.</p>
+      <p>Automated player detection and positioning using autodistilled models. The system detects players, court landmarks, and projects (x, y) positions onto a minimap. The annotations were generated through a fully automated process without human intervention, demonstrating the power of foundation models for dataset creation.</p>
     </div>
   </div>
 </section>
 
-
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class=" carousel results-carousel">
-          <div class="item">
-            <video autoplay controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_bicycle.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_flowers.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_Courthouse.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_Barn.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_kitchen.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_stump.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video controls muted loop playsinline height="100%">
-              <source src="./videos/fly_through_bonsai.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <p>We optimize adaptive sparse voxels radiance field from multi-view images without SfM points. The fly-through videos are rendered by our SVRaster in >100 FPS.</p>
-      </div>
-    </div>
-  </section>
 
 
   <section class="section">
@@ -156,8 +105,8 @@
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              We propose an efficient radiance field rendering algorithm that incorporates a rasterization process on adaptive sparse voxels without neural networks or 3D Gaussians. There are two key contributions coupled with the proposed system. The first is to adaptively and explicitly allocate sparse voxels to different levels of detail within scenes, faithfully reproducing scene details with 65536<sup>3</sup> grid resolution while achieving high rendering frame rates. Second, we customize a rasterizer for efficient adaptive sparse voxels rendering. We render voxels in the correct depth order by using ray direction-dependent Morton ordering, which avoids the well-known popping artifact found in Gaussian splatting. Our method improves the previous neural-free voxel model by over 4db PSNR and more than 10x FPS speedup, achieving state-of-the-art comparable novel-view synthesis results. Additionally, our voxel representation is seamlessly compatible with grid-based 3D processing techniques such as Volume Fusion, Voxel Pooling, and Marching Cubes, enabling a wide range of future extensions and applications.
-            </p>
+            Traditional sports analytics and computer vision models rely on manually annotated datasets, which are expensive and time-consuming to create. Tennis Autodistillation introduces an automated approach to dataset generation by leveraging foundation models—large, general-purpose AI models capable of zero-shot understanding. This project employs ChatGPT Vision (GPT-4V) and <a href="https://arxiv.org/abs/2401.14159">Grounded SAM</a> to automatically classify frames, detect players, and identify court landmarks from raw tennis match footage. These auto-labeled datasets are then used to train lightweight, task-specific models that can efficiently perform player detection and court keypoint estimation in real-time. By using foundation models for initial labeling, we eliminate the need for manual annotation, enabling rapid dataset creation for model training. The <a href="https://github.com/autodistill/autodistill"> Roboflow Autodistill</a> library automates the process of transferring knowledge from powerful but resource-intensive models to smaller, more efficient models, making real-time tennis analysis feasible even on consumer hardware. The final trained models can take a raw video of a tennis match and generate an overhead minimap that tracks player positions, opening doors for automated sports analytics, tactical insights, and AI-powered coaching tools. This method not only applies to tennis but can be extended to other sports, surveillance, and autonomous systems where structured datasets are essential.
+	    </p>
           </div>
         </div>
       </div>
